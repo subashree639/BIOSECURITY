@@ -9,43 +9,494 @@ class AppLocalizationsTa extends AppLocalizations {
   AppLocalizationsTa([String locale = 'ta']) : super(locale);
 
   @override
-  String get appName => 'டிஜிட்டல் பார்ம் பயோசெக்யூரிட்டி';
+  String get appTitle => 'ஏபிசி (ஆன்டிபயாடிக் செக்)';
 
   @override
-  String get tagline => 'பயோசெக்யூர் பார்ம்ஸ் — பன்றி மற்றும் கோழி வளர்ப்புக்கு உள்ளூரி காவல்';
+  String get appSubtitle => 'விவசாயிகளுக்கு ஆன்டிபயாடிக் செக்';
 
   @override
-  String get initializing => 'உள்ளூரி தரவுத்தளத்தை துவக்குகிறது...';
+  String get farmer => 'விவசாயி';
 
   @override
-  String get skip => 'தவிர்';
+  String get vet => 'மருத்துவர்';
 
   @override
-  String get next => 'அடுத்து';
+  String get seller => 'விற்பனையாளர்';
 
   @override
-  String get getStarted => 'தொடங்கு';
+  String get login => 'உள்நுழை';
 
   @override
-  String get onboarding1Title => 'பயோசெக்யூரிட்டி என்ன?';
+  String get register => 'பதிவு செய்';
 
   @override
-  String get onboarding1Desc => 'பயோசெக்யூரிட்டி நோய்கள் மற்றும் அச்சுறுத்தல்களிலிருந்து பார்ம்களை தடுப்பு நடவடிக்கைகள் மூலம் பாதுகாக்கிறது.';
+  String get newToApp => 'பயன்பாட்டில் புதியவரா? பதிவு செய்';
 
   @override
-  String get onboarding2Title => 'ஆப் எப்படி உதவுகிறது';
+  String get tapMicSayPassphrase =>
+      'மைக் அழுத்தி உங்கள் கடவுச்சொல்லை சொல்லுங்கள்';
 
   @override
-  String get onboarding2Desc => 'அபாய சோதனைகள், பயிற்சி, எச்சரிக்கைகள் மற்றும் ஆஃப்லைன் பதிவுகள் சிறந்த பார்ம் மேலாண்மைக்கு.';
+  String voiceRegistered(Object id) {
+    return 'குரல் பதிவு செய்யப்பட்டது — ஐடி: $id';
+  }
 
   @override
-  String get onboarding3Title => 'தனியுரிமை மற்றும் உள்ளூரி சேமிப்பு';
+  String get listening => 'விவசாயி — கேட்கிறது...';
 
   @override
-  String get onboarding3Desc => 'தரவு உங்கள் சாதனத்தில் வைக்கப்படுகிறது; ஏற்றுமதி விருப்பங்கள் கிடைக்கின்றன.';
+  String get loginWithMobile => 'மொபைல் மூலம் உள்நுழை (OTP)';
 
   @override
-  String get language => 'மொழி';
+  String get enterMobileNumber => 'மொபைல் எண்ணை உள்ளீடு செய்யுங்கள்';
+
+  @override
+  String get sendOTP => 'OTP அனுப்பு';
+
+  @override
+  String get verifyLogin => 'சரிபார்த்து உள்நுழை';
+
+  @override
+  String get resendOTP => 'OTP மீண்டும் அனுப்பு';
+
+  @override
+  String get enterOTP => '6-இலக்க OTP உள்ளீடு செய்யுங்கள்';
+
+  @override
+  String otpSentTo(Object number) {
+    return 'OTP அனுப்பப்பட்டது: $number';
+  }
+
+  @override
+  String get incorrectOTP => 'தவறான OTP';
+
+  @override
+  String get enterValidMobile => 'சரியான மொபைல் உள்ளீடு செய்யுங்கள்';
+
+  @override
+  String mockOTP(Object otp) {
+    return 'மாக் OTP: $otp';
+  }
+
+  @override
+  String mockOTPFarmer(Object otp) {
+    return 'மாக் OTP (விவசாயி): $otp';
+  }
+
+  @override
+  String mockOTPSeller(Object otp) {
+    return 'மாக் OTP (விற்பனையாளர்): $otp';
+  }
+
+  @override
+  String get veterinaryLogin => 'மருத்துவ உள்நுழைவு';
+
+  @override
+  String get pleaseEnterLoginDetails =>
+      'உங்கள் உள்நுழைவு விவரங்களை உள்ளீடு செய்யுங்கள்';
+
+  @override
+  String get username => 'பயனர்பெயர்';
+
+  @override
+  String get password => 'கடவுச்சொல்';
+
+  @override
+  String get vetIdRegNo => 'மருத்துவர் ஐடி / பதிவு எண்';
+
+  @override
+  String get loginAsVet => 'மருத்துவராக உள்நுழை';
+
+  @override
+  String get newToAppRegisterVet =>
+      'பயன்பாட்டில் புதியவரா? மருத்துவராக பதிவு செய்';
+
+  @override
+  String get verifying => 'சரிபார்க்கிறது...';
+
+  @override
+  String get invalidVetCredentials => 'தவறான மருத்துவர் சான்றுகள்';
+
+  @override
+  String get sellerUser => 'விற்பனையாளர் / பயனர்';
+
+  @override
+  String get pleaseEnterPhoneNumber =>
+      'உங்கள் தொலைபேசி எண்ணை உள்ளீடு செய்யுங்கள்';
+
+  @override
+  String get verifyOTP => 'OTP சரிபார்க்க';
+
+  @override
+  String get otpSent => 'OTP அனுப்பப்பட்டது';
+
+  @override
+  String get registerAsFarmer => 'விவசாயியாக பதிவு செய்';
+
+  @override
+  String get welcomeRegister =>
+      'வரவேற்கிறோம்! ஏபிசி பயன்படுத்த பதிவு செய்யுங்கள் — குரல் அல்லது மொபைல் பதிவை தேர்ந்தெடுக்கவும்';
+
+  @override
+  String get voiceRegistration => 'குரல் பதிவு';
+
+  @override
+  String get voiceRegDesc =>
+      'குரல் சுயவிவரத்தை பதிவு செய்யுங்கள் (சிமுலேட் என்ரோல்). விவசாயிகளுடன் பகிரக்கூடிய ஒரு எளிய விவசாயி ஐடியை உருவாக்குங்கள்.';
+
+  @override
+  String get mobileRegistration => 'மொபைல் பதிவு';
+
+  @override
+  String get mobileRegDesc =>
+      'உங்கள் தொலைபேசி எண்ணைப் பயன்படுத்தி பதிவு செய்யுங்கள் (OTP). உங்கள் தொலைபேசியை விவசாயி ஐடியாக வைத்திருக்கலாம் அல்லது ஒரு தனிப்பயன் ஐடியை தேர்ந்தெடுக்கலாம்.';
+
+  @override
+  String get voiceEnrollment => 'குரல் என்ரோல்மென்ட் (சிமுலேட்)';
+
+  @override
+  String get tapEnrollStart =>
+      'குரல் கேப்சர் தொடங்க ENROLL அழுத்தவும். உங்களுக்கு மூன்று முறை ஒரு சிறிய வாக்கியத்தை சொல்ல கேட்கப்படும்.';
+
+  @override
+  String get recordingVoice =>
+      'உங்கள் குரலை பதிவு செய்கிறது — நிலையாக இருங்கள் மற்றும் குறிப்பிடப்பட்டபோது வாக்கியத்தை சொல்லுங்கள்.';
+
+  @override
+  String get enrollmentComplete =>
+      'என்ரோல்மென்ட் முடிந்தது — உங்கள் விவசாயி ஐடி:';
+
+  @override
+  String get enrollVoice => 'குரல் என்ரோல் செய்';
+
+  @override
+  String get cancel => 'ரத்து செய்';
+
+  @override
+  String get processingEnrollment => 'என்ரோல்மென்ட் செயலாக்கம்...';
+
+  @override
+  String get continueToDashboard => 'டாஷ்போர்டுக்கு தொடர்ந்து';
+
+  @override
+  String get retryEnrollment => 'என்ரோல்மென்ட் மீண்டும் முயற்சி செய்';
+
+  @override
+  String get registerByMobile => 'மொபைல் மூலம் பதிவு செய்';
+
+  @override
+  String get mobileNumber => 'மொபைல் எண்';
+
+  @override
+  String get addCustomId => 'தனிப்பயன் ஐடி சேர்க்க?';
+
+  @override
+  String get customFarmerId =>
+      'தனிப்பயன் விவசாயி ஐடி (அக்ஷரங்கள் மற்றும் எண்கள்)';
+
+  @override
+  String get ifNotCustom =>
+      'நீங்கள் ஒரு தனிப்பயன் ஐடியை வழங்கவில்லை என்றால், உங்கள் தொலைபேசி எண் உங்கள் விவசாயி ஐடியாக பயன்படுத்தப்படும்.';
+
+  @override
+  String get enterValidPhone => 'சரியான தொலைபேசி உள்ளீடு செய்யுங்கள்';
+
+  @override
+  String get idAlreadyInUse => 'தனிப்பயன் ஐடி ஏற்கனவே பயன்பாட்டில் உள்ளது';
+
+  @override
+  String registeredFarmerId(Object id) {
+    return 'பதிவு செய்யப்பட்டது — விவசாயி ஐடி: $id';
+  }
+
+  @override
+  String registrationError(Object error) {
+    return 'பதிவு பிழை: $error';
+  }
+
+  @override
+  String get registerVet => 'மருத்துவர் பதிவு செய்';
+
+  @override
+  String get registerAsVetDoctor => 'மருத்துவராக பதிவு செய்';
+
+  @override
+  String get useProfessionalCredentials =>
+      'பதிவு செய்ய தொழில்முறை சான்றுகளை பயன்படுத்துங்கள் (பயனர்பெயர் + கடவுச்சொல் + மருத்துவர் ஐடி).';
+
+  @override
+  String get registerWithCredentials => 'சான்றுகளுடன் பதிவு செய்';
+
+  @override
+  String get createUsernamePasswordVetId =>
+      'பயனர்பெயர் + கடவுச்சொல் + மருத்துவர் ஐடி உருவாக்கு';
+
+  @override
+  String get contactSupport => 'உதவியை தொடர்பு கொள்';
+
+  @override
+  String get enterpriseOnboarding =>
+      'உங்களுக்கு எண்டர்பிரைஸ் ஆன்போர்டிங் தேவையா என்றால் எங்களுக்கு தெரிவிக்கவும்';
+
+  @override
+  String get contactSupportPlaceholder => 'உதவியை தொடர்பு கொள் (பிளேஸ்ஹோல்டர்)';
+
+  @override
+  String get veterinaryRegistration => 'மருத்துவ பதிவு';
+
+  @override
+  String get fillAllFields => 'அனைத்து புலங்களையும் நிரப்பு';
+
+  @override
+  String get vetRegistered =>
+      'மருத்துவர் பதிவு செய்யப்பட்டது — உள்நுழைய கடவுச்சொல்லை பயன்படுத்து';
+
+  @override
+  String get farmerDashboard => 'விவசாயி டாஷ்போர்ட்';
+
+  @override
+  String get logout => 'வெளியேறு';
+
+  @override
+  String animalsCount(Object count, Object withdrawal) {
+    return 'விலங்குகள்: $count • விலகலில்: $withdrawal';
+  }
+
+  @override
+  String get animalDatabase => 'விலங்கு தரவுத்தளம்';
+
+  @override
+  String get manageAnimalDatabase => 'விலங்கு தரவுத்தளத்தை நிர்வகி';
+
+  @override
+  String get addAnimal => 'விலங்கு சேர்க்க';
+
+  @override
+  String get addNewAnimal => 'புதிய விலங்கு சேர்க்க';
+
+  @override
+  String get guides => 'வழிகாட்டிகள்';
+
+  @override
+  String get withdrawalDosingGuides => 'விலகல் மற்றும் டோசிங் வழிகாட்டிகள்';
+
+  @override
+  String get guidesPlaceholder => 'வழிகாட்டிகள் (பிளேஸ்ஹோல்டர்)';
+
+  @override
+  String get contactVet => 'மருத்துவரை தொடர்பு கொள்';
+
+  @override
+  String get shareFarmerIdWithVet => 'மருத்துவருடன் விவசாயி ஐடியை பகிர்';
+
+  @override
+  String shareId(Object id) {
+    return 'ஐடி பகிர்: $id';
+  }
+
+  @override
+  String get animalId => 'விலங்கு ஐடி';
+
+  @override
+  String get enterId => 'ஐடி உள்ளீடு செய்';
+
+  @override
+  String get generate => 'உருவாக்கு';
+
+  @override
+  String get species => 'இனம்';
+
+  @override
+  String get selectSpecies => 'இனத்தை தேர்ந்தெடு';
+
+  @override
+  String get age => 'வயது (ஆண்டுகள்)';
+
+  @override
+  String get enterAge => 'வயதை உள்ளீடு செய்';
+
+  @override
+  String get breed => 'இனம்';
+
+  @override
+  String get chooseBreed => 'இனம் தேர்ந்தெடு';
+
+  @override
+  String get enterBreed => 'இனம் உள்ளீடு செய்';
+
+  @override
+  String get saveAnimal => 'விலங்கு சேமி';
+
+  @override
+  String get animalSaved => 'விலங்கு சேமிக்கப்பட்டது';
+
+  @override
+  String get animalDatabaseTitle => 'விலங்கு தரவுத்தளம்';
+
+  @override
+  String get searchByIdSpeciesBreed => 'ஐடி, இனம் அல்லது இனத்தால் தேடு';
+
+  @override
+  String get all => 'அனைத்தும்';
+
+  @override
+  String get noAnimalsYet => 'இன்னும் விலங்குகள் இல்லை';
+
+  @override
+  String get tapAddCreateAnimals =>
+      'விலங்குகளை உருவாக்க சேர்க்கு என்பதைத் தட்டவும்';
+
+  @override
+  String get animalDetails => 'விலங்கு விவரங்கள்';
+
+  @override
+  String get close => 'மூடு';
+
+  @override
+  String get id => 'ஐடி';
+
+  @override
+  String get lastMedicine => 'கடைசி மருந்து';
+
+  @override
+  String get withdrawalEnd => 'விலகல் முடிவு';
+
+  @override
+  String get deleteAnimal => 'விலங்கு நீக்கு';
+
+  @override
+  String get deleted => 'நீக்கப்பட்டது';
+
+  @override
+  String get vetConsulting => 'மருத்துவ ஆலோசனை';
+
+  @override
+  String get enterFarmerIdOrPhone => 'விவசாயி ஐடி அல்லது தொலைபேசி';
+
+  @override
+  String get load => 'ஏற்று';
+
+  @override
+  String loadedAnimals(Object count) {
+    return 'விலங்குகள் ஏற்றப்பட்டன — மொத்தம் $count (டெமோ)';
+  }
+
+  @override
+  String get enterFarmerId => 'விவசாயி ஐடி அல்லது தொலைபேசி உள்ளீடு செய்';
+
+  @override
+  String get noAnimalsInDatabase => 'தரவுத்தளத்தில் விலங்குகள் இல்லை.';
+
+  @override
+  String get consult => 'ஆலோசனை';
+
+  @override
+  String consultAnimal(Object id) {
+    return 'ஆலோசனை • $id';
+  }
+
+  @override
+  String get medicine => 'மருந்து (தட்டச்சு செய்ய தொடங்கு)';
+
+  @override
+  String get dosage => 'டோஸ் (mg/kg)';
+
+  @override
+  String get withdrawalPeriod => 'விலகல் காலம் (நாட்கள்)';
+
+  @override
+  String get notes => 'குறிப்புகள் (விருப்பமானது)';
+
+  @override
+  String get saveConsultation => 'ஆலோசனை சேமி';
+
+  @override
+  String get savedToAnimalRecord => 'விலங்கு பதிவில் ஆலோசனை சேமிக்கப்பட்டது';
+
+  @override
+  String get enterMedicine => 'மருந்து உள்ளீடு செய்';
+
+  @override
+  String get consultingHistory => 'ஆலோசனை வரலாறு';
+
+  @override
+  String get noConsultationHistory =>
+      'ஆலோசனை வரலாறு பிளேஸ்ஹோல்டர் (தேவைப்படும்போது சேமி).';
+
+  @override
+  String get sellerDashboard => 'விற்பனையாளர் டாஷ்போர்ட்';
+
+  @override
+  String get foodScanner => 'உணவு ஸ்கேனர்';
+
+  @override
+  String get scanFoodQR => 'உணவு/QR ஸ்கேன் செய்';
+
+  @override
+  String get animalScanner => 'விலங்கு ஸ்கேனர்';
+
+  @override
+  String get scanAnimalTag => 'விலங்கு டேக் ஸ்கேன் செய்';
+
+  @override
+  String get foodScannerPlaceholder => 'உணவு ஸ்கேனர் பிளேஸ்ஹோல்டர்';
+
+  @override
+  String get animalScannerPlaceholder => 'விலங்கு ஸ்கேனர் பிளேஸ்ஹோல்டர்';
+
+  @override
+  String get camera => 'கேமரா';
+
+  @override
+  String imageCaptured(Object path) {
+    return 'படம் கேப்சர் செய்யப்பட்டது: $path';
+  }
+
+  @override
+  String get cameraNotAvailable => 'கேமரா கிடைக்கவில்லை';
+
+  @override
+  String errorCapturingImage(Object error) {
+    return 'படம் கேப்சர் செய்யும் பிழை: $error';
+  }
+
+  @override
+  String get safe => 'பாதுகாப்பானது';
+
+  @override
+  String get inWithdrawal => 'விலகலில்';
+
+  @override
+  String get phoneNumber => 'தொலைபேசி எண்';
+
+  @override
+  String get farmerId => 'விவசாயி ஐடி';
+
+  @override
+  String get guest => 'விருந்தினர்';
+
+  @override
+  String get home => 'முகப்பு';
+
+  @override
+  String get animals => 'விலங்குகள்';
+
+  @override
+  String get history => 'வரலாறு';
+
+  @override
+  String get noHistoryYet => 'இன்னும் ஆலோசனை வரலாறு இல்லை.';
+
+  @override
+  String lastMedicineDosage(Object dosage, Object end, Object medicine) {
+    return 'கடைசி மருந்து: $medicine • $dosage mg/kg\nவிலகல் முடிவு: $end';
+  }
+
+  @override
+  String get unknown => 'தெரியாதது';
+
+  @override
+  String get selectLanguage => 'மொழி தேர்ந்தெடு';
 
   @override
   String get english => 'English';
@@ -57,91 +508,409 @@ class AppLocalizationsTa extends AppLocalizations {
   String get tamil => 'தமிழ்';
 
   @override
-  String get useDeviceLanguage => 'சாதன மொழியைப் பயன்படுத்து';
+  String get chooseYourLanguage => 'உங்கள் மொழியை தேர்ந்தெடுக்கவும்';
 
   @override
-  String get saveContinue => 'சேமி மற்றும் தொடர்ந்து';
+  String get continueButton => 'தொடர்ந்து';
 
   @override
-  String get role => 'பங்கு';
+  String get enterUsernamePasswordVetId =>
+      'பயனர்பெயர்/கடவுச்சொல்/மருத்துவர் ஐடி உள்ளீடு செய்யுங்கள்';
 
   @override
-  String get farmer => 'விவசாயி';
+  String get productType => 'தயாரிப்பு வகை';
 
   @override
-  String get veterinarian => 'மருத்துவர்';
+  String get mrlInformation => 'எம்ஆர்எல் தகவல்';
 
   @override
-  String get extensionWorker => 'நீட்டிப்பு தொழிலாளி';
+  String get currentMRL => 'தற்போதைய எம்ஆர்எல்';
 
   @override
-  String get authority => 'அதிகாரி';
+  String get status => 'நிலை';
 
   @override
-  String get login => 'உள்நுழை';
+  String get withdrawalDays => 'விலகல் நாட்கள்';
 
   @override
-  String get createAccount => 'கணக்கு உருவாக்கு';
+  String get allStatus => 'அனைத்து நிலை';
 
   @override
-  String get username => 'பயனர் பெயர்';
+  String get withdrawal => 'விலகல்';
 
   @override
-  String get password => 'கடவுச்சொல்';
+  String ageWithValue(Object age) {
+    return 'வயது • $age';
+  }
 
   @override
-  String get pin => 'பின்';
+  String get view => 'பார்க்க';
 
   @override
-  String get confirmPassword => 'கடவுச்சொல்லை உறுதிப்படுத்து';
+  String get delete => 'நீக்கு';
 
   @override
-  String get enableBiometrics => 'பயோமெட்ரிக்ஸ் இயக்கு';
+  String get addedToDatabase => 'தரவுத்தளத்தில் சேர்க்கப்பட்டது';
 
   @override
-  String get forgotPin => 'பின் மறந்துவிட்டீர்களா?';
+  String get withdrawalGuides => 'விலகல் வழிகாட்டிகள்';
 
   @override
-  String get dashboard => 'டாஷ்போர்டு';
+  String get noAnimalsInWithdrawalPeriod => 'விலகல் காலத்தில் விலங்குகள் இல்லை';
 
   @override
-  String get startAssessment => 'அபாய மதிப்பீடு தொடங்கு';
+  String get allAnimalsSafeForConsumption =>
+      'உங்கள் அனைத்து விலங்குகளும் நுகர்வுக்கு பாதுகாப்பானவை';
 
   @override
-  String get recordIncident => 'சம்பவத்தை பதிவு செய்';
+  String get withdrawalDetails => 'விலகல் விவரங்கள்';
 
   @override
-  String get trainingModules => 'பயிற்சி தொகுதிகள்';
+  String get timeRemaining => 'மீதமுள்ள நேரம்';
 
   @override
-  String get recentAlerts => 'சமீபத்திய எச்சரிக்கைகள்';
+  String get medicineAndWithdrawal => 'மருந்து மற்றும் விலகல்';
 
   @override
-  String get lastAssessment => 'கடைசி மதிப்பீடு';
+  String get consultingVet => 'ஆலோசனை மருத்துவர்';
 
   @override
-  String get currentRisk => 'தற்போதைய அபாயம்';
+  String get noVetAssigned => 'மருத்துவர் ஒதுக்கப்படவில்லை';
 
   @override
-  String get animalsCount => 'விலங்குகளின் எண்ணிக்கை';
+  String get viewMrlGraph => 'எம்ஆர்எல் வரைபடத்தை பார்க்க';
 
   @override
-  String get farmName => 'பார்ம் பெயர்';
+  String get started => 'தொடங்கியது';
 
   @override
-  String get ownerName => 'உரிமையாளர் பெயர்';
+  String get ends => 'முடிகிறது';
 
   @override
-  String get villageTown => 'கிராமம்/நகரம்';
+  String get prescriptions => 'மருந்து பரிந்துரைகள்';
 
   @override
-  String get latitude => 'அகலாங்கு';
+  String get qrCodes => 'QR குறியீடுகள்';
 
   @override
-  String get longitude => 'நெடுங்கோடு';
+  String get analytics => 'பகுப்பாய்வு';
 
   @override
-  String get species => 'இனம்';
+  String get alerts => 'எச்சரிக்கைகள்';
+
+  @override
+  String get blockchain => 'பிளாக்செயின்';
+
+  @override
+  String get noDigitalPrescriptions => 'டிஜிட்டல் மருந்து பரிந்துரைகள் இல்லை';
+
+  @override
+  String get prescriptionsWillAppearHere =>
+      'மருத்துவ ஆலோசனைகளுக்குப் பிறகு மருந்து பரிந்துரைகள் இங்கே தோன்றும்';
+
+  @override
+  String get prescriptionFor => 'மருந்து பரிந்துரை';
+
+  @override
+  String get active => 'செயலில்';
+
+  @override
+  String get completed => 'முடிந்தது';
+
+  @override
+  String get digitalPrescription => 'டிஜிட்டல் மருந்து பரிந்துரை';
+
+  @override
+  String get prescriptionStatus => 'மருந்து பரிந்துரை நிலை';
+
+  @override
+  String get activeWithdrawalPeriod => 'விலகல் காலம் செயலில்';
+
+  @override
+  String get completedSafeToConsume => 'முடிந்தது - நுகர்வுக்கு பாதுகாப்பானது';
+
+  @override
+  String get animalInformation => 'விலங்கு தகவல்';
+
+  @override
+  String get prescriptionDetails => 'மருந்து பரிந்துரை விவரங்கள்';
+
+  @override
+  String get prescribedBy => 'பரிந்துரை செய்தவர்';
+
+  @override
+  String get viewDetails => 'விவரங்களை பார்க்க';
+
+  @override
+  String get qrCertificateGenerator => 'QR சான்றிதழ் உருவாக்கி';
+
+  @override
+  String get generateQrCodesForAnimalCertificates =>
+      'விலங்கு சான்றிதழ்களுக்கு QR குறியீடுகளை உருவாக்குங்கள்';
+
+  @override
+  String get qrGenerationDate => 'QR உருவாக்க தேதி';
+
+  @override
+  String get noAnimalsAvailable => 'விலங்குகள் கிடைக்கவில்லை';
+
+  @override
+  String get addAnimalsToGenerateQrCertificates =>
+      'QR சான்றிதழ்களை உருவாக்க விலங்குகளை சேர்க்கவும்';
+
+  @override
+  String get generateQrCertificate => 'QR சான்றிதழ் உருவாக்கு';
+
+  @override
+  String get qrCertificateGenerated => 'QR சான்றிதழ் உருவாக்கப்பட்டது';
+
+  @override
+  String get animalInWithdrawalNotSafeToConsume =>
+      'விலங்கு விலகலில் உள்ளது - நுகர்வுக்கு பாதுகாப்பல்ல';
+
+  @override
+  String get doNotConsumeProducts =>
+      'இந்த விலங்கின் தயாரிப்புகளை நுகர்வு செய்ய வேண்டாம்';
+
+  @override
+  String get certificateDetails => 'சான்றிதழ் விவரங்கள்';
+
+  @override
+  String get validUntil => 'செல்லுபடியாகும் வரை';
+
+  @override
+  String get withdrawalEnds => 'விலகல் முடிகிறது';
+
+  @override
+  String get share => 'பகிர்';
+
+  @override
+  String get farmAnalytics => 'பண்ணை பகுப்பாய்வு';
+
+  @override
+  String get animalHealthAnalytics => 'விலங்கு ஆரோக்கிய பகுப்பாய்வு';
+
+  @override
+  String get withdrawalPeriodAnalytics => 'விலகல் கால பகுப்பாய்வு';
+
+  @override
+  String get mrlComplianceAnalytics => 'எம்ஆர்எல் இணங்கல் பகுப்பாய்வு';
+
+  @override
+  String get farmAlerts => 'பண்ணை எச்சரிக்கைகள்';
+
+  @override
+  String get withdrawalAlerts => 'விலகல் எச்சரிக்கைகள்';
+
+  @override
+  String get healthAlerts => 'ஆரோக்கிய எச்சரிக்கைகள்';
+
+  @override
+  String get complianceAlerts => 'இணங்கல் எச்சரிக்கைகள்';
+
+  @override
+  String get blockchainVerification => 'பிளாக்செயின் சரிபார்ப்பு';
+
+  @override
+  String get animalRecordsOnBlockchain => 'பிளாக்செயினில் விலங்கு பதிவுகள்';
+
+  @override
+  String get verifyAnimalData => 'விலங்கு தரவை சரிபார்க்க';
+
+  @override
+  String get blockchainTransactions => 'பிளாக்செயின் பரிவர்த்தனைகள்';
+
+  @override
+  String get aiVetAssistant => 'AI மருத்துவ உதவியாளர்';
+
+  @override
+  String get aiTreatmentRecommendations => 'AI சிகிச்சை பரிந்துரைகள்';
+
+  @override
+  String get getAiRecommendations => 'AI பரிந்துரைகளை பெற';
+
+  @override
+  String get aiHealthAnalysis => 'AI ஆரோக்கிய பகுப்பாய்வு';
+
+  @override
+  String get shareWithVet => 'மருத்துவருடன் பகிர்';
+
+  @override
+  String get digitalCertificate => 'டிஜிட்டல் சான்றிதழ்';
+
+  @override
+  String get withdrawalPeriodActive => 'விலகல் காலம் செயலில்';
+
+  @override
+  String get withdrawalPeriodCompleted => 'விலகல் காலம் முடிந்தது';
+
+  @override
+  String get endsOn => 'முடிகிறது';
+
+  @override
+  String get certificateReadyForSharing =>
+      'பகிர்வுக்கு QR சான்றிதழ் தயாராக உள்ளது';
+
+  @override
+  String get animalIdentification => 'விலங்கு அடையாளம்';
+
+  @override
+  String get enterUniqueAnimalId =>
+      'தனித்துவமான விலங்கு ஐடியை உள்ளீடு செய்யுங்கள்';
+
+  @override
+  String get generateId => 'ஐடி உருவாக்கு';
+
+  @override
+  String get pleaseEnterAnimalId => 'விலங்கு ஐடியை உள்ளீடு செய்யுங்கள்';
+
+  @override
+  String get pleaseSelectSpecies => 'இனத்தை தேர்ந்தெடுக்கவும்';
+
+  @override
+  String get breedAgeDetails => 'இனம் மற்றும் வயது விவரங்கள்';
+
+  @override
+  String get pleaseEnterAge => 'வயதை உள்ளீடு செய்யுங்கள்';
+
+  @override
+  String get enterValidAge => 'சரியான வயதை உள்ளீடு செய்யுங்கள் (0-50)';
+
+  @override
+  String get enterCustomBreed => 'தனிப்பயன் இனத்தை உள்ளீடு செய்யுங்கள்';
+
+  @override
+  String get enterBreedName => 'இனத்தின் பெயரை உள்ளீடு செய்யுங்கள்';
+
+  @override
+  String get pleaseSelectBreed => 'இனத்தை தேர்ந்தெடுக்கவும்';
+
+  @override
+  String get pleaseEnterBreed => 'இனத்தை உள்ளீடு செய்யுங்கள்';
+
+  @override
+  String get otherCustom => 'மற்றவை (தனிப்பயன்)';
+
+  @override
+  String get selectSpeciesFirst => 'முதலில் இனத்தை தேர்ந்தெடு';
+
+  @override
+  String get saving => 'சேமிக்கப்படுகிறது...';
+
+  @override
+  String get animalAddedSuccessfully => 'விலங்கு வெற்றிகரமாக சேர்க்கப்பட்டது!';
+
+  @override
+  String get failedToSaveAnimal =>
+      'விலங்கை சேமிக்க இயலவில்லை. மீண்டும் முயற்சிக்கவும்.';
+
+  @override
+  String get allTypes => 'அனைத்து வகைகளும்';
+
+  @override
+  String get withdrawalWarning => 'விலகல் எச்சரிக்கை';
+
+  @override
+  String get withdrawalExpired => 'விலகல் காலாவதியானது';
+
+  @override
+  String get mrlViolation => 'எம்ஆர்எல் மீறல்';
+
+  @override
+  String get treatmentOverdue => 'சிகிச்சை காலாவதியானது';
+
+  @override
+  String get complianceRisk => 'இணங்கல் ஆபத்து';
+
+  @override
+  String get allSeverities => 'அனைத்து தீவிரங்கள்';
+
+  @override
+  String get totalAlerts => 'மொத்த எச்சரிக்கைகள்';
+
+  @override
+  String get unread => 'படிக்காதவை';
+
+  @override
+  String get critical => 'முக்கியமானது';
+
+  @override
+  String get noAlertsFound => 'எச்சரிக்கைகள் எதுவும் கிடைக்கவில்லை';
+
+  @override
+  String get allComplianceChecksPassing =>
+      'அனைத்து இணங்கல் சரிபார்ப்புகளும் தேர்ச்சி பெறுகின்றன';
+
+  @override
+  String get createCustomAlert => 'தனிப்பயன் எச்சரிக்கை உருவாக்கு';
+
+  @override
+  String get alertTitle => 'எச்சரிக்கை தலைப்பு';
+
+  @override
+  String get alertMessage => 'எச்சரிக்கை செய்தி';
+
+  @override
+  String get severity => 'தீவிரம்';
+
+  @override
+  String get alertType => 'எச்சரிக்கை வகை';
+
+  @override
+  String get createAlert => 'எச்சரிக்கை உருவாக்கு';
+
+  @override
+  String get read => 'படி';
+
+  @override
+  String get markAsRead => 'படித்ததாக குறி';
+
+  @override
+  String get dismiss => 'நிராகரி';
+
+  @override
+  String get justNow => 'இப்போதே';
+
+  @override
+  String minutesAgo(Object count) {
+    return '$count நிமிடங்களுக்கு முன்பு';
+  }
+
+  @override
+  String hoursAgo(Object count) {
+    return '$count மணி நேரங்களுக்கு முன்பு';
+  }
+
+  @override
+  String daysAgo(Object count) {
+    return '$count நாட்களுக்கு முன்பு';
+  }
+
+  @override
+  String get low => 'குறைவு';
+
+  @override
+  String get medium => 'நடுத்தரம்';
+
+  @override
+  String get high => 'அதிகம்';
+
+  @override
+  String animalIdLabel(Object id) {
+    return 'விலங்கு ஐடி: $id';
+  }
+
+  @override
+  String get cow => 'மாடு';
+
+  @override
+  String get buffalo => 'எருமை';
+
+  @override
+  String get goat => 'ஆடு';
+
+  @override
+  String get sheep => 'செம்மறி ஆடு';
 
   @override
   String get pig => 'பன்றி';
@@ -150,422 +919,432 @@ class AppLocalizationsTa extends AppLocalizations {
   String get poultry => 'கோழி';
 
   @override
-  String get farmSize => 'பார்ம் அளவு';
+  String get other => 'மற்றவை';
 
   @override
-  String get productionSystem => 'உற்பத்தி அமைப்பு';
+  String get jersey => 'ஜெர்சி';
 
   @override
-  String get backyard => 'பின்புறம்';
+  String get holstein => 'ஹால்ஸ்டைன்';
 
   @override
-  String get commercial => 'வணிக';
+  String get sahiwal => 'சஹிவால்';
 
   @override
-  String get photos => 'புகைப்படங்கள்';
+  String get gir => 'கிர்';
 
   @override
-  String get saveDraft => 'வரைவை சேமி';
+  String get redSindhi => 'சிவப்பு சிந்தி';
 
   @override
-  String get save => 'சேமி';
+  String get tharparkar => 'தார்பார்கர்';
 
   @override
-  String get cancel => 'ரத்து செய்';
+  String get murrah => 'முற்றா';
 
   @override
-  String get yes => 'ஆம்';
+  String get niliRavi => 'நீலி ராவி';
 
   @override
-  String get no => 'இல்லை';
+  String get jaffarabadi => 'ஜஃபராபாதி';
 
   @override
-  String get submit => 'சமர்ப்பி';
+  String get surti => 'சூர்தி';
 
   @override
-  String get export => 'ஏற்றுமதி';
+  String get bhadawari => 'பாதவரி';
 
   @override
-  String get import => 'இறக்குமதி';
+  String get beetal => 'பீட்டல்';
 
   @override
-  String get settings => 'அமைப்புகள்';
+  String get boer => 'போயர்';
 
   @override
-  String get help => 'உதவி';
+  String get jamunapari => 'ஜாமுனபாரி';
 
   @override
-  String get logout => 'வெளியேறு';
+  String get sirohi => 'சிரோஹி';
 
   @override
-  String get chooseYourLanguage => 'உங்கள் மொழியைத் தேர்ந்தெடுக்கவும்';
+  String get barbari => 'பார்பரி';
 
   @override
-  String get selectLanguageDescription => 'நீங்கள் பயன்படுத்த விரும்பும் மொழியைத் தேர்ந்தெடுக்கவும்';
+  String get merino => 'மெரினோ';
 
   @override
-  String get welcomeBack => 'மீண்டும் வருக';
+  String get rambouillet => 'ராம்போலியட்';
 
   @override
-  String get mobileNumber => 'மொபைல் எண்';
+  String get cheviot => 'செவியாட்';
 
   @override
-  String get enterMobileNumber => 'உங்கள் மொபைல் எண்ணை உள்ளீடு செய்யவும்';
+  String get suffolk => 'சஃபோக்';
 
   @override
-  String get sendOtp => 'OTP அனுப்பு';
+  String get hampshire => 'ஹாம்ப்ஷயர்';
 
   @override
-  String get enterOtp => '6 இலக்க OTP உள்ளீடு செய்யவும்';
+  String get largeWhite => 'பெரிய வெள்ளை';
 
   @override
-  String get otpPlaceholder => '000000';
+  String get yorkshire => 'யார்க்ஷயர்';
 
   @override
-  String get pinLogin => 'பின் உள்நுழைவு';
+  String get berkshire => 'பெர்க்ஷயர்';
 
   @override
-  String get enterUsername => 'உங்கள் பயனர் பெயரை உள்ளீடு செய்யவும்';
+  String get desi => 'தேசி';
 
   @override
-  String get enterPassword => 'உங்கள் கடவுச்சொல்லை உள்ளீடு செய்யவும்';
+  String get layer => 'லேயர்';
 
   @override
-  String get enterPin => '4-6 இலக்க பின்னை உள்ளீடு செய்யவும்';
+  String get broiler => 'ப்ராய்லர்';
 
   @override
-  String get verifyOtp => 'OTP சரிபார்க்கவும்';
+  String get amuAnalyticsDashboard => 'ஏஎம்யூ பகுப்பாய்வு டாஷ்போர்ட்';
 
   @override
-  String get dontHaveAccount => 'கணக்கு இல்லையா?';
+  String get noDataAvailable => 'தரவு எதுவும் கிடைக்கவில்லை';
 
   @override
-  String get dataSecurityMessage => 'உங்கள் தரவு உள்ளூரில் சேமிக்கப்பட்டு அதிகபட்ச பாதுகாப்புக்கு குறியாக்கம் செய்யப்படுகிறது.';
+  String analysisPeriod(Object end, Object start) {
+    return 'பகுப்பாய்வு காலம்: $start முதல் $end';
+  }
 
   @override
-  String get testCredentials => 'சோதனை நற்சான்றிதழ்கள்';
+  String get summaryStatistics => 'சுருக்கமான புள்ளியியல்';
 
   @override
-  String get testMobile => 'சோதனை மொபைல்';
+  String get totalAnimals => 'மொத்த விலங்குகள்';
 
   @override
-  String get otpValue => 'OTP';
+  String get animalsTreated => 'சிகிச்சையளிக்கப்பட்ட விலங்குகள்';
 
   @override
-  String get registerWithMobile => 'OTP உள்நுழைவுக்கு மொபைல் எண்ணுடன் பதிவு செய்யவும்';
+  String get treatmentRate => 'சிகிச்சை விகிதம்';
 
   @override
-  String get invalidCredentials => 'தவறான நற்சான்றிதழ்கள்';
+  String get complianceIssues => 'இணங்கல் சிக்கல்கள்';
 
   @override
-  String get loginSuccessful => 'உள்நுழைவு வெற்றிகரமாக';
+  String get trendAnalysis => 'மரபு பகுப்பாய்வு';
 
   @override
-  String get otpSent => 'உங்கள் மொபைல் எண்ணுக்கு OTP அனுப்பப்பட்டது';
+  String get trendDirection => 'மரபு திசை';
 
   @override
-  String get failedToSendOtp => 'OTP அனுப்புவதில் தோல்வி';
+  String get volatility => 'அதிர்ச்சி';
 
   @override
-  String get pleaseEnterMobile => 'மொபைல் எண்ணை உள்ளீடு செய்யவும்';
+  String get seasonalPatterns => 'பருவகால முறைகள்';
 
   @override
-  String get pleaseEnterOtp => '6 இலக்க OTP உள்ளீடு செய்யவும்';
+  String get noSeasonalPatternsDetected =>
+      'பருவகால முறைகள் எதுவும் கண்டறியப்படவில்லை';
 
   @override
-  String get mobileRequired => 'மொபைல் எண் தேவை';
+  String peakMonths(Object months) {
+    return 'உச்ச மாதங்கள்: $months';
+  }
 
   @override
-  String get validMobileRequired => 'சரியான மொபைல் எண்ணை உள்ளீடு செய்யவும்';
+  String lowMonths(Object months) {
+    return 'குறைவான மாதங்கள்: $months';
+  }
 
   @override
-  String get otpRequired => 'OTP தேவை';
+  String get complianceAnalysis => 'இணங்கல் பகுப்பாய்வு';
 
   @override
-  String get validOtpRequired => '6 இலக்க OTP உள்ளீடு செய்யவும்';
+  String get complianceRate => 'இணங்கல் விகிதம்';
 
   @override
-  String get usernameRequired => 'பயனர் பெயர் தேவை';
+  String get compliantAnimals => 'இணங்கிய விலங்குகள்';
 
   @override
-  String get passwordRequired => 'கடவுச்சொல் தேவை';
+  String get riskFactors => 'ஆபத்து காரணிகள்';
 
   @override
-  String get pinRequired => 'பின் தேவை';
+  String get noSignificantRiskFactors =>
+      'முக்கியமான ஆபத்து காரணிகள் எதுவும் அடையாளம் காணப்படவில்லை';
 
   @override
-  String get pinMinLength => 'பின் குறைந்தது 4 இலக்கங்கள் இருக்க வேண்டும்';
+  String get noMedicineUsageData =>
+      'மருந்து பயன்பாட்டு தரவு எதுவும் கிடைக்கவில்லை';
 
   @override
-  String get roleFarmer => 'விவசாயி';
+  String get medicineUsageDistribution => 'மருந்து பயன்பாட்டு விநியோகம்';
 
   @override
-  String get roleVeterinarian => 'மருத்துவர்';
+  String get noRecommendationsAvailable => 'பரிந்துரைகள் எதுவும் கிடைக்கவில்லை';
 
   @override
-  String get roleExtensionWorker => 'நீட்டிப்பு தொழிலாளி';
+  String get recommendations => 'பரிந்துரைகள்';
 
   @override
-  String get roleAuthority => 'அதிகாரி';
+  String failedToLoadAnalytics(Object error) {
+    return 'பகுப்பாய்வை ஏற்றுவதில் தோல்வி: $error';
+  }
 
   @override
-  String get farmGuardian => 'பார்ம் காவலர்';
+  String get addAnimalsFirstAi =>
+      'AI பரிந்துரைகளைப் பெற சில விலங்குகளை முதலில் சேர்க்கவும்';
 
   @override
-  String get healthExpert => 'சுகாதார நிபுணர்';
+  String failedToGetAiRecommendations(Object error) {
+    return 'AI பரிந்துரைகளைப் பெறுவதில் தோல்வி: $error';
+  }
 
   @override
-  String get fieldSupport => 'புல துணை';
+  String get noSpecificRecommendations =>
+      'இந்த நேரத்தில் குறிப்பிட்ட பரிந்துரைகள் எதுவும் இல்லை';
 
   @override
-  String get regulatoryOversight => 'ஒழுங்குமுறை மேற்பார்வை';
+  String get healthScore => 'ஆரோக்கிய மதிப்பெண்';
 
   @override
-  String get protectFarm => 'விரிவான பயோசெக்யூரிட்டி நடவடிக்கைகளுடன் உங்கள் பார்மை பாதுகாத்து, இணங்கலை எளிதாக கண்காணிக்கவும்.';
+  String get aiRecommendations => 'AI பரிந்துரைகள்';
 
   @override
-  String get monitorHealth => 'விலங்கு சுகாதாரத்தை கண்காணிக்கவும், சிக்கல்களை கண்டறியவும், உகந்த பயோசெக்யூரிட்டி தரநிலைகளை உறுதிப்படுத்தவும்.';
+  String get preventiveCare => 'தடுப்பு பராமரிப்பு';
 
   @override
-  String get provideGuidance => 'நிபுணர் வழிகாட்டலை வழங்கவும், பயிற்சியை நடத்தவும், விவசாயிகளுக்கு அவர்களின் பயோசெக்யூரிட்டி பயணத்தில் ஆதரவளிக்கவும்.';
+  String failedToAnalyzeHealth(Object error) {
+    return 'ஆரோக்கியத்தை பகுப்பாய்வு செய்வதில் தோல்வி: $error';
+  }
 
   @override
-  String get overseeCompliance => 'இணங்கலை மேற்பார்வையிடவும், அமைப்பு அமைப்புகளை நிர்வகிக்கவும், பிராந்திய பயோசெக்யூரிட்டி தரநிலைகளை உறுதிப்படுத்தவும்.';
+  String get loggingOut => 'வெளியேறுகிறது...';
 
   @override
-  String get chooseYourRole => 'Choose Your Role';
+  String get aiTreatmentRecommendationsDesc => 'AI சிகிச்சை பரிந்துரைகள்';
 
   @override
-  String get selectRoleDescription => 'Select the role that best describes your responsibilities';
+  String ageAddedToDatabase(Object age) {
+    return 'வயது: $age • தரவுத்தளத்தில் சேர்க்கப்பட்டது';
+  }
 
   @override
-  String get manageFarmBiosecurity => 'Manage farm biosecurity and records.';
+  String get searchAnimals => 'விலங்குகளைத் தேடு';
 
   @override
-  String get provideVeterinaryServices => 'Provide veterinary services and monitor health.';
+  String get withdrawalStatus => 'விலகல்';
 
   @override
-  String get assistFarmersTraining => 'Assist farmers with training and support.';
+  String get safeStatus => 'பாதுகாப்பானது';
 
   @override
-  String get overseeComplianceSettings => 'Oversee compliance and manage system settings.';
+  String get inWithdrawalStatus => 'விலகலில்';
 
   @override
-  String get riskAssessments => 'Risk Assessments';
+  String get viewButton => 'பார்';
 
   @override
-  String get complianceTracking => 'Compliance Tracking';
+  String get aiButton => 'AI';
 
   @override
-  String get incidentReporting => 'Incident Reporting';
+  String get deleteButton => 'நீக்கு';
 
   @override
-  String get healthMonitoring => 'Health Monitoring';
+  String get deletedMessage => 'நீக்கப்பட்டது';
 
   @override
-  String get diseaseDiagnosis => 'Disease Diagnosis';
+  String prescriptionForSpecies(Object species) {
+    return '$species க்கான மருந்து பரிந்துரை';
+  }
 
   @override
-  String get treatmentRecords => 'Treatment Records';
+  String get activeStatus => 'செயலில்';
 
   @override
-  String get trainingPrograms => 'Training Programs';
+  String get completedStatus => 'முடிந்தது';
 
   @override
-  String get farmVisits => 'Farm Visits';
+  String get medicineLabel => 'மருந்து';
 
   @override
-  String get technicalSupport => 'Technical Support';
+  String get dosageLabel => 'அளவு';
 
   @override
-  String get systemAdministration => 'System Administration';
+  String get withdrawalPeriodLabel => 'விலகல் காலம்';
 
   @override
-  String get complianceOversight => 'Compliance Oversight';
+  String get endsLabel => 'முடிகிறது';
 
   @override
-  String get dataAnalytics => 'Data Analytics';
+  String prescribedByLabel(Object vet) {
+    return 'பரிந்துரைத்தவர்: $vet';
+  }
 
   @override
-  String get premiumDashboard => 'பிரீமியம் டாஷ்போர்டு';
+  String get viewDetailsButton => 'விவரங்களைப் பார்';
 
   @override
-  String get advancedFarmManagement => 'மேம்பட்ட பார்ம் மேலாண்மை அமைப்பு';
+  String get digitalPrescriptionTitle => 'டிஜிட்டல் மருந்து பரிந்துரை';
 
   @override
-  String get noFarmConfigured => 'பார்ம் கட்டமைக்கப்படவில்லை';
+  String get prescriptionStatusLabel => 'மருந்து பரிந்துரை நிலை';
 
   @override
-  String get farmerId => 'விவசாயி ஐடி';
+  String get activeWithdrawalPeriodStatus => 'செயலில் - விலகல் காலம்';
 
   @override
-  String get useIdForConsultations => 'மருத்துவ ஆலோசனைகளுக்கு இந்த ஐடியைப் பயன்படுத்தவும்';
+  String get completedSafeToConsumeStatus =>
+      'முடிந்தது - நுகர்வுக்கு பாதுகாப்பானது';
 
   @override
-  String get farmProfile => 'பார்ம் சுயவிவரம்';
+  String get animalInformationSection => 'விலங்கு தகவல்';
 
   @override
-  String get edit => 'திருத்து';
+  String get prescriptionDetailsSection => 'மருந்து பரிந்துரை விவரங்கள்';
 
   @override
-  String get farmDetails => 'பார்ம் விவரங்கள்';
+  String speciesAndBreedLabel(Object breed, Object species) {
+    return 'இனம் மற்றும் வயது: $species - $breed';
+  }
 
   @override
-  String get livestockInfo => 'கால்நடை தகவல்';
+  String get productTypeLabel => 'தயாரிப்பு வகை';
 
   @override
-  String get noAnimalsRegistered => 'விலங்குகள் பதிவு செய்யப்படவில்லை';
+  String prescribedDateLabel(Object date) {
+    return 'பரிந்துரைக்கப்பட்ட தேதி: $date';
+  }
 
   @override
-  String get addAnimalsToTrack => 'சரக்கு கண்காணிப்புக்கு விலங்குகளைச் சேர்க்கவும்';
+  String withdrawalEndsLabel(Object date) {
+    return 'விலகல் முடிகிறது: $date';
+  }
 
   @override
-  String get farmAnalytics => 'பார்ம் பகுப்பாய்வு';
+  String get mrlStatusSection => 'எம்ஆர்எல் நிலை';
 
   @override
-  String get biosecurityScore => 'பயோசெக்யூரிட்டி மதிப்பெண்';
+  String currentMrlLabel(Object mrl) {
+    return 'தற்போதைய எம்ஆர்எல்: $mrl அலகுகள்';
+  }
 
   @override
-  String get notAssessed => 'மதிப்பீடு செய்யப்படவில்லை';
+  String statusLabel(Object status) {
+    return 'நிலை: $status';
+  }
 
   @override
-  String get compliance => 'இணங்கல்';
+  String get veterinaryInformationSection => 'மருத்துவ தகவல்';
 
   @override
-  String get compliant => 'இணங்கியது';
+  String consultingVetLabel(Object vet) {
+    return 'ஆலோசனை மருத்துவர்: $vet';
+  }
 
   @override
-  String get alerts => 'எச்சரிக்கைகள்';
+  String vetIdLabel(Object id) {
+    return 'மருத்துவர் ஐடி: $id';
+  }
 
   @override
-  String get active => 'செயலில்';
+  String get noVetAssignedMessage => 'மருத்துவர் எவரும் ஒதுக்கப்படவில்லை';
 
   @override
-  String get healthCheck => 'சுகாதார சோதனை';
+  String get viewMrlGraphButton => 'எம்ஆர்எல் வரைபடத்தைப் பார்';
 
   @override
-  String get pending => 'நிலுவையில்';
+  String get noAnimalsAvailableMessage => 'விலங்குகள் எதுவும் கிடைக்கவில்லை';
 
   @override
-  String get training => 'பயிற்சி';
+  String get addAnimalsToGenerateQrMessage =>
+      'QR சான்றிதழ்களை உருவாக்க விலங்குகளைச் சேர்க்கவும்';
 
   @override
-  String get modules => 'தொகுதிகள்';
+  String get qrCertificateGeneratorTitle => 'QR சான்றிதழ் உருவாக்கி';
 
   @override
-  String get animals => 'விலங்குகள்';
+  String get generateQrCodesDesc =>
+      'விலங்கு சான்றிதழ்களுக்கு QR குறியீடுகளை உருவாக்கு';
 
   @override
-  String get recentActivity => 'சமீபத்திய செயல்பாடு';
+  String qrGenerationDateLabel(Object date) {
+    return 'QR உருவாக்க தேதி: $date';
+  }
 
   @override
-  String get consultationHistory => 'ஆலோசனை வரலாறு';
+  String speciesBreedDisplay(Object breed, Object species) {
+    return '$species - $breed';
+  }
 
   @override
-  String get viewAll => 'அனைத்தையும் காண்க';
+  String idDisplay(Object id) {
+    return 'ஐடி: $id';
+  }
 
   @override
-  String get disease => 'நோய்';
+  String get withdrawalPeriodActiveMessage => 'விலகல் காலம் செயலில்';
 
   @override
-  String get followUp => 'பின்தொடர்பு';
+  String get withdrawalPeriodCompletedMessage => 'விலகல் காலம் முடிந்தது';
 
   @override
-  String get moreOptions => 'மேலும் விருப்பங்கள்';
+  String endsDateDisplay(Object date) {
+    return 'முடிகிறது: $date';
+  }
 
   @override
-  String get helpSupport => 'உதவி மற்றும் ஆதரவு';
+  String get generateQrCertificateButton => 'QR சான்றிதழை உருவாக்கு';
 
   @override
-  String get backupRestore => 'காப்பு மற்றும் மீட்டமை';
+  String get generatingQrCertificateMessage =>
+      'QR சான்றிதழ் உருவாக்கப்படுகிறது...';
 
   @override
-  String get adminPanel => 'நிர்வாக பலகம்';
+  String get qrCertificateGeneratedTitle => 'QR சான்றிதழ் உருவாக்கப்பட்டது';
 
   @override
-  String get confirmLogout => 'நீங்கள் வெளியேற விரும்புகிறீர்களா?';
+  String get animalInWithdrawalWarning =>
+      '⚠️ விலங்கு விலகலில் உள்ளது - நுகர்வுக்கு பாதுகாப்பானது அல்ல';
 
   @override
-  String get profileComingSoon => 'சுயவிவரம் - விரைவில் வருகிறது!';
+  String get safeToConsumeMessage => '✅ நுகர்வுக்கு பாதுகாப்பானது';
 
   @override
-  String get settingsComingSoon => 'அமைப்புகள் - விரைவில் வருகிறது!';
+  String get doNotConsumeWarning =>
+      'விலகல் காலம் முடியும் வரை இந்த விலங்கின் தயாரிப்புகளை நுகர வேண்டாம்.';
 
   @override
-  String get premiumExperience => '✨ பிரீமியம் டாஷ்போர்டு அனுபவம்!';
+  String get certificateDetailsSection => 'சான்றிதழ் விவரங்கள்';
 
   @override
-  String get digitalRecordKeeping => '📝 டிஜிட்டல் பதிவு வைத்திருத்தல் - பார்ம் செயல்பாட்டு பதிவுகள் மற்றும் இணங்கல் கண்காணிப்பு';
+  String get speciesLabel => 'இனம்';
 
   @override
-  String get emergencyResponse => '🚑 அவசர எதிர்வினை - வெடிப்பு நெறிமுறைகள் மற்றும் அவசர தொடர்புகள்';
+  String farmerIdLabel(Object id) {
+    return 'விவசாயி ஐடி: $id';
+  }
 
   @override
-  String get veterinarianDashboard => 'மருத்துவர் டாஷ்போர்டு';
+  String generatedDateLabel(Object date) {
+    return 'உருவாக்கப்பட்ட தேதி: $date';
+  }
 
   @override
-  String get licensedVeterinaryProfessional => 'உரிமம் பெற்ற மருத்துவ நிபுணர்';
+  String validUntilLabel(Object date) {
+    return 'செல்லுபடியாகும் வரை: $date';
+  }
 
   @override
-  String get veterinaryManagementHub => 'மருத்துவ மேலாண்மை மையம்';
+  String get qrCertificateReadyMessage =>
+      'பகிர்வுக்கு QR சான்றிதழ் தயாராக உள்ளது';
 
   @override
-  String get healthMonitoringDiagnostics => 'சுகாதார கண்காணிப்பு மற்றும் நோயறிதல்';
+  String get errorTitle => 'பிழை';
 
   @override
-  String get diseaseSurveillance => 'நோய் கண்காணிப்பு';
+  String failedToGenerateQrMessage(Object error) {
+    return 'QR சான்றிதழை உருவாக்குவதில் தோல்வி: $error';
+  }
 
   @override
-  String get monitorRegionalHealthTrends => 'பிராந்திய சுகாதார போக்குகளை கண்காணிக்கவும்';
-
-  @override
-  String get outbreakResponse => 'வெடிப்பு எதிர்வினை';
-
-  @override
-  String get emergencyProtocolsAlerts => 'அவசர நெறிமுறைகள் மற்றும் எச்சரிக்கைகள்';
-
-  @override
-  String get animalConsultation => 'விலங்கு ஆலோசனை';
-
-  @override
-  String get consultAnimals => 'விலங்குகளை ஆலோசிக்கவும்';
-
-  @override
-  String get examineTreatLivestock => 'விவசாயி ஐடியால் கால்நடையை பரிசோதித்து சிகிச்சையளிக்கவும்';
-
-  @override
-  String get complianceTraining => 'இணங்கல் மற்றும் பயிற்சி';
-
-  @override
-  String get regulatoryCompliance => 'ஒழுங்குமுறை இணங்கல்';
-
-  @override
-  String get monitorFarmCompliance => 'பார்ம் இணங்கலை கண்காணிக்கவும்';
-
-  @override
-  String get professionalTraining => 'தொழில்முறை பயிற்சி';
-
-  @override
-  String get continuingEducation => 'தொடர்ந்து கல்வி';
-
-  @override
-  String get veterinaryOversightSummary => 'மருத்துவ மேற்பார்வை சுருக்கம்';
-
-  @override
-  String get totalFarms => 'மொத்த பார்ம்கள்';
-
-  @override
-  String get highRiskFarms => 'உயர் அபாய பார்ம்கள்';
-
-  @override
-  String get activeAlerts => 'செயலில் உள்ள எச்சரிக்கைகள்';
-
-  @override
-  String get recentVeterinaryActivities => 'சமீபத்திய மருத்துவ செயல்பாடுகள்';
-
-  @override
-  String get veterinarianProfileComingSoon => 'மருத்துவர் சுயவிவரம் - விரைவில் வருகிறது!';
-
-  @override
-  String get veterinarianSettingsComingSoon => 'மருத்துவர் அமைப்புகள் - விரைவில் வருகிறது!';
+  String get doNotConsumeProductsWarning =>
+      'Do not consume products from this animal until withdrawal period ends.';
 }

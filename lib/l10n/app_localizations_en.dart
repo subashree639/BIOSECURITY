@@ -9,43 +9,486 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String get appName => 'Digital Farm Biosecurity';
+  String get appTitle => 'ABC (Antibiotic Check)';
 
   @override
-  String get tagline => 'Biosecure Farms — local guard for pig & poultry';
+  String get appSubtitle => 'Antibiotic Check for Farmers';
 
   @override
-  String get initializing => 'Initializing local database...';
+  String get farmer => 'Farmer';
 
   @override
-  String get skip => 'Skip';
+  String get vet => 'Vet';
 
   @override
-  String get next => 'Next';
+  String get seller => 'Seller';
 
   @override
-  String get getStarted => 'Get Started';
+  String get login => 'Login';
 
   @override
-  String get onboarding1Title => 'What is biosecurity?';
+  String get register => 'Register';
 
   @override
-  String get onboarding1Desc => 'Biosecurity protects farms from diseases and threats through preventive measures.';
+  String get newToApp => 'New to app? Register';
 
   @override
-  String get onboarding2Title => 'How the app helps';
+  String get tapMicSayPassphrase => 'Tap mic & say your passphrase';
 
   @override
-  String get onboarding2Desc => 'Risk checks, training, alerts & offline records for better farm management.';
+  String voiceRegistered(Object id) {
+    return 'Voice registered — ID: $id';
+  }
 
   @override
-  String get onboarding3Title => 'Privacy & local storage';
+  String get listening => 'Farmer — Listening...';
 
   @override
-  String get onboarding3Desc => 'Data kept on your device; export options available.';
+  String get loginWithMobile => 'Login with Mobile (OTP)';
 
   @override
-  String get language => 'Language';
+  String get enterMobileNumber => 'Enter mobile number';
+
+  @override
+  String get sendOTP => 'Send OTP';
+
+  @override
+  String get verifyLogin => 'Verify & Login';
+
+  @override
+  String get resendOTP => 'Resend OTP';
+
+  @override
+  String get enterOTP => 'Enter 6-digit OTP';
+
+  @override
+  String otpSentTo(Object number) {
+    return 'OTP sent to $number';
+  }
+
+  @override
+  String get incorrectOTP => 'Incorrect OTP';
+
+  @override
+  String get enterValidMobile => 'Enter valid mobile';
+
+  @override
+  String mockOTP(Object otp) {
+    return 'Mock OTP: $otp';
+  }
+
+  @override
+  String mockOTPFarmer(Object otp) {
+    return 'Mock OTP (farmer): $otp';
+  }
+
+  @override
+  String mockOTPSeller(Object otp) {
+    return 'Mock OTP (seller): $otp';
+  }
+
+  @override
+  String get veterinaryLogin => 'Veterinary Login';
+
+  @override
+  String get pleaseEnterLoginDetails => 'Please enter your login details';
+
+  @override
+  String get username => 'Username';
+
+  @override
+  String get password => 'Password';
+
+  @override
+  String get vetIdRegNo => 'Vet ID / Reg No';
+
+  @override
+  String get loginAsVet => 'Login as Vet';
+
+  @override
+  String get newToAppRegisterVet => 'New to app? Register as Vet';
+
+  @override
+  String get verifying => 'Verifying...';
+
+  @override
+  String get invalidVetCredentials => 'Invalid vet credentials';
+
+  @override
+  String get sellerUser => 'Seller / User';
+
+  @override
+  String get pleaseEnterPhoneNumber => 'Please enter your phone number';
+
+  @override
+  String get verifyOTP => 'Verify OTP';
+
+  @override
+  String get otpSent => 'OTP sent';
+
+  @override
+  String get registerAsFarmer => 'Register as Farmer';
+
+  @override
+  String get welcomeRegister =>
+      'Welcome! Register to use ABC — choose voice or mobile registration';
+
+  @override
+  String get voiceRegistration => 'Voice Registration';
+
+  @override
+  String get voiceRegDesc =>
+      'Register voice profile (simulated enroll). Create a simple Farmer ID you can share with vets.';
+
+  @override
+  String get mobileRegistration => 'Mobile Registration';
+
+  @override
+  String get mobileRegDesc =>
+      'Register using your phone number (OTP). You can keep your phone as Farmer ID or choose a custom ID.';
+
+  @override
+  String get voiceEnrollment => 'Voice Enrollment (simulated)';
+
+  @override
+  String get tapEnrollStart =>
+      'Tap ENROLL to start voice capture. You will be asked to say a short phrase three times.';
+
+  @override
+  String get recordingVoice =>
+      'Recording your voice — hold still and speak the phrase when prompted.';
+
+  @override
+  String get enrollmentComplete => 'Enrollment complete — your Farmer ID is:';
+
+  @override
+  String get enrollVoice => 'Enroll Voice';
+
+  @override
+  String get cancel => 'Cancel';
+
+  @override
+  String get processingEnrollment => 'Processing enrollment...';
+
+  @override
+  String get continueToDashboard => 'Continue to Dashboard';
+
+  @override
+  String get retryEnrollment => 'Retry Enrollment';
+
+  @override
+  String get registerByMobile => 'Register by Mobile';
+
+  @override
+  String get mobileNumber => 'Mobile number';
+
+  @override
+  String get addCustomId => 'Add custom ID?';
+
+  @override
+  String get customFarmerId => 'Custom Farmer ID (alphanumeric)';
+
+  @override
+  String get ifNotCustom =>
+      'If you do not provide a custom ID, your phone number will be used as your Farmer ID.';
+
+  @override
+  String get enterValidPhone => 'Enter valid phone';
+
+  @override
+  String get idAlreadyInUse => 'Custom ID already in use';
+
+  @override
+  String registeredFarmerId(Object id) {
+    return 'Registered — Farmer ID: $id';
+  }
+
+  @override
+  String registrationError(Object error) {
+    return 'Registration error: $error';
+  }
+
+  @override
+  String get registerVet => 'Register Vet';
+
+  @override
+  String get registerAsVetDoctor => 'Register as Veterinary Doctor';
+
+  @override
+  String get useProfessionalCredentials =>
+      'Use professional credentials to register (username + password + vet id).';
+
+  @override
+  String get registerWithCredentials => 'Register with credentials';
+
+  @override
+  String get createUsernamePasswordVetId =>
+      'Create username + password + vet ID';
+
+  @override
+  String get contactSupport => 'Contact support';
+
+  @override
+  String get enterpriseOnboarding =>
+      'If you need enterprise onboarding let us know';
+
+  @override
+  String get contactSupportPlaceholder => 'Contact support (placeholder)';
+
+  @override
+  String get veterinaryRegistration => 'Veterinary Registration';
+
+  @override
+  String get fillAllFields => 'Fill all fields';
+
+  @override
+  String get vetRegistered => 'Vet registered — use credentials to login';
+
+  @override
+  String get farmerDashboard => 'Farmer Dashboard';
+
+  @override
+  String get logout => 'Logout';
+
+  @override
+  String animalsCount(Object count, Object withdrawal) {
+    return 'Animals: $count • In withdrawal: $withdrawal';
+  }
+
+  @override
+  String get animalDatabase => 'Animal Database';
+
+  @override
+  String get manageAnimalDatabase => 'Manage animal database';
+
+  @override
+  String get addAnimal => 'Add Animal';
+
+  @override
+  String get addNewAnimal => 'Add new animal';
+
+  @override
+  String get guides => 'Guides';
+
+  @override
+  String get withdrawalDosingGuides => 'Withdrawal & dosing guides';
+
+  @override
+  String get guidesPlaceholder => 'Guides (placeholder)';
+
+  @override
+  String get contactVet => 'Contact Vet';
+
+  @override
+  String get shareFarmerIdWithVet => 'Share Farmer ID with vet';
+
+  @override
+  String shareId(Object id) {
+    return 'Share ID: $id';
+  }
+
+  @override
+  String get animalId => 'Animal ID';
+
+  @override
+  String get enterId => 'Enter id';
+
+  @override
+  String get generate => 'Gen';
+
+  @override
+  String get species => 'Species';
+
+  @override
+  String get selectSpecies => 'Select Species';
+
+  @override
+  String get age => 'Age (yrs)';
+
+  @override
+  String get enterAge => 'Enter age';
+
+  @override
+  String get breed => 'Breed';
+
+  @override
+  String get chooseBreed => 'Choose breed';
+
+  @override
+  String get enterBreed => 'Enter breed';
+
+  @override
+  String get saveAnimal => 'Save Animal';
+
+  @override
+  String get animalSaved => 'Animal saved';
+
+  @override
+  String get animalDatabaseTitle => 'Animal Database';
+
+  @override
+  String get searchByIdSpeciesBreed => 'Search by id, species or breed';
+
+  @override
+  String get all => 'All';
+
+  @override
+  String get noAnimalsYet => 'No animals yet';
+
+  @override
+  String get tapAddCreateAnimals => 'Tap add to create animals';
+
+  @override
+  String get animalDetails => 'Animal Details';
+
+  @override
+  String get close => 'Close';
+
+  @override
+  String get id => 'ID';
+
+  @override
+  String get lastMedicine => 'Last Medicine';
+
+  @override
+  String get withdrawalEnd => 'Withdrawal End';
+
+  @override
+  String get deleteAnimal => 'Delete Animal';
+
+  @override
+  String get deleted => 'Deleted';
+
+  @override
+  String get vetConsulting => 'Vet Consulting';
+
+  @override
+  String get enterFarmerIdOrPhone => 'Farmer ID or phone';
+
+  @override
+  String get load => 'Load';
+
+  @override
+  String loadedAnimals(Object count) {
+    return 'Loaded animals — $count total (demo)';
+  }
+
+  @override
+  String get enterFarmerId => 'Enter farmer id or phone';
+
+  @override
+  String get noAnimalsInDatabase => 'No animals in database.';
+
+  @override
+  String get consult => 'Consult';
+
+  @override
+  String consultAnimal(Object id) {
+    return 'Consult • $id';
+  }
+
+  @override
+  String get medicine => 'Medicine';
+
+  @override
+  String get dosage => 'Dosage (mg/kg)';
+
+  @override
+  String get withdrawalPeriod => 'Withdrawal Period (days)';
+
+  @override
+  String get notes => 'Notes (optional)';
+
+  @override
+  String get saveConsultation => 'Save Consultation';
+
+  @override
+  String get savedToAnimalRecord => 'Saved consultation to animal record';
+
+  @override
+  String get enterMedicine => 'Enter medicine';
+
+  @override
+  String get consultingHistory => 'Consulting History';
+
+  @override
+  String get noConsultationHistory =>
+      'Consultation history placeholder (persist when you need).';
+
+  @override
+  String get sellerDashboard => 'Seller Dashboard';
+
+  @override
+  String get foodScanner => 'Food Scanner';
+
+  @override
+  String get scanFoodQR => 'Scan food/QR';
+
+  @override
+  String get animalScanner => 'Animal Scanner';
+
+  @override
+  String get scanAnimalTag => 'Scan animal tag';
+
+  @override
+  String get foodScannerPlaceholder => 'Food scanner placeholder';
+
+  @override
+  String get animalScannerPlaceholder => 'Animal scanner placeholder';
+
+  @override
+  String get camera => 'Camera';
+
+  @override
+  String imageCaptured(Object path) {
+    return 'Image captured: $path';
+  }
+
+  @override
+  String get cameraNotAvailable => 'Camera not available';
+
+  @override
+  String errorCapturingImage(Object error) {
+    return 'Error capturing image: $error';
+  }
+
+  @override
+  String get safe => 'Safe';
+
+  @override
+  String get inWithdrawal => 'In Withdrawal';
+
+  @override
+  String get phoneNumber => 'Phone Number';
+
+  @override
+  String get farmerId => 'Farmer ID';
+
+  @override
+  String get guest => 'Guest';
+
+  @override
+  String get home => 'Home';
+
+  @override
+  String get animals => 'Animals';
+
+  @override
+  String get history => 'History';
+
+  @override
+  String get noHistoryYet => 'No consultation history yet.';
+
+  @override
+  String lastMedicineDosage(Object dosage, Object end, Object medicine) {
+    return 'Last Medicine: $medicine • $dosage mg/kg\nWithdrawal End: $end';
+  }
+
+  @override
+  String get unknown => 'Unknown';
+
+  @override
+  String get selectLanguage => 'Select Language';
 
   @override
   String get english => 'English';
@@ -57,91 +500,404 @@ class AppLocalizationsEn extends AppLocalizations {
   String get tamil => 'தமிழ்';
 
   @override
-  String get useDeviceLanguage => 'Use device language';
+  String get chooseYourLanguage => 'Choose Your Language';
 
   @override
-  String get saveContinue => 'Save & Continue';
+  String get continueButton => 'Continue';
 
   @override
-  String get role => 'Role';
+  String get enterUsernamePasswordVetId => 'Enter username/password/vet id';
 
   @override
-  String get farmer => 'Farmer';
+  String get productType => 'Product Type';
 
   @override
-  String get veterinarian => 'Veterinarian';
+  String get mrlInformation => 'MRL Information';
 
   @override
-  String get extensionWorker => 'Extension Worker';
+  String get currentMRL => 'Current MRL';
 
   @override
-  String get authority => 'Authority';
+  String get status => 'Status';
 
   @override
-  String get login => 'Login';
+  String get withdrawalDays => 'Withdrawal Days';
 
   @override
-  String get createAccount => 'Create Account';
+  String get allStatus => 'All Status';
 
   @override
-  String get username => 'Username';
+  String get withdrawal => 'Withdrawal';
 
   @override
-  String get password => 'Password';
+  String ageWithValue(Object age) {
+    return 'Age • $age';
+  }
 
   @override
-  String get pin => 'PIN';
+  String get view => 'View';
 
   @override
-  String get confirmPassword => 'Confirm Password';
+  String get delete => 'Delete';
 
   @override
-  String get enableBiometrics => 'Enable Biometrics';
+  String get addedToDatabase => 'Added to database';
 
   @override
-  String get forgotPin => 'Forgot PIN?';
+  String get withdrawalGuides => 'Withdrawal Guides';
 
   @override
-  String get dashboard => 'Dashboard';
+  String get noAnimalsInWithdrawalPeriod => 'No animals in withdrawal period';
 
   @override
-  String get startAssessment => 'Start Risk Assessment';
+  String get allAnimalsSafeForConsumption =>
+      'All your animals are safe for consumption';
 
   @override
-  String get recordIncident => 'Record Incident';
+  String get withdrawalDetails => 'Withdrawal Details';
 
   @override
-  String get trainingModules => 'Training Modules';
+  String get timeRemaining => 'Time Remaining';
 
   @override
-  String get recentAlerts => 'Recent Alerts';
+  String get medicineAndWithdrawal => 'Medicine & Withdrawal';
 
   @override
-  String get lastAssessment => 'Last Assessment';
+  String get consultingVet => 'Consulting Vet';
 
   @override
-  String get currentRisk => 'Current Risk';
+  String get noVetAssigned => 'No vet assigned';
 
   @override
-  String get animalsCount => 'Animals Count';
+  String get viewMrlGraph => 'View MRL Graph';
 
   @override
-  String get farmName => 'Farm Name';
+  String get started => 'Started';
 
   @override
-  String get ownerName => 'Owner Name';
+  String get ends => 'Ends';
 
   @override
-  String get villageTown => 'Village/Town';
+  String get prescriptions => 'Prescriptions';
 
   @override
-  String get latitude => 'Latitude';
+  String get qrCodes => 'QR Codes';
 
   @override
-  String get longitude => 'Longitude';
+  String get analytics => 'Analytics';
 
   @override
-  String get species => 'Species';
+  String get alerts => 'Alerts';
+
+  @override
+  String get blockchain => 'Blockchain';
+
+  @override
+  String get noDigitalPrescriptions => 'No Digital Prescriptions';
+
+  @override
+  String get prescriptionsWillAppearHere =>
+      'Prescriptions will appear here after veterinary consultations';
+
+  @override
+  String get prescriptionFor => 'Prescription for';
+
+  @override
+  String get active => 'Active';
+
+  @override
+  String get completed => 'Completed';
+
+  @override
+  String get digitalPrescription => 'Digital Prescription';
+
+  @override
+  String get prescriptionStatus => 'Prescription Status';
+
+  @override
+  String get activeWithdrawalPeriod => 'Active - Withdrawal Period';
+
+  @override
+  String get completedSafeToConsume => 'Completed - Safe to Consume';
+
+  @override
+  String get animalInformation => 'Animal Information';
+
+  @override
+  String get prescriptionDetails => 'Prescription Details';
+
+  @override
+  String get prescribedBy => 'Prescribed by';
+
+  @override
+  String get viewDetails => 'View Details';
+
+  @override
+  String get qrCertificateGenerator => 'QR Certificate Generator';
+
+  @override
+  String get generateQrCodesForAnimalCertificates =>
+      'Generate QR codes for animal certificates with safety status';
+
+  @override
+  String get qrGenerationDate => 'QR Generation Date';
+
+  @override
+  String get noAnimalsAvailable => 'No Animals Available';
+
+  @override
+  String get addAnimalsToGenerateQrCertificates =>
+      'Add animals to generate QR certificates';
+
+  @override
+  String get generateQrCertificate => 'Generate QR Certificate';
+
+  @override
+  String get qrCertificateGenerated => 'QR Certificate Generated';
+
+  @override
+  String get animalInWithdrawalNotSafeToConsume =>
+      'ANIMAL IN WITHDRAWAL - NOT SAFE TO CONSUME';
+
+  @override
+  String get doNotConsumeProducts =>
+      'Do not consume products from this animal until withdrawal period ends.';
+
+  @override
+  String get certificateDetails => 'Certificate Details';
+
+  @override
+  String get validUntil => 'Valid Until';
+
+  @override
+  String get withdrawalEnds => 'Withdrawal Ends';
+
+  @override
+  String get share => 'Share';
+
+  @override
+  String get farmAnalytics => 'Farm Analytics';
+
+  @override
+  String get animalHealthAnalytics => 'Animal Health Analytics';
+
+  @override
+  String get withdrawalPeriodAnalytics => 'Withdrawal Period Analytics';
+
+  @override
+  String get mrlComplianceAnalytics => 'MRL Compliance Analytics';
+
+  @override
+  String get farmAlerts => 'Farm Alerts';
+
+  @override
+  String get withdrawalAlerts => 'Withdrawal Alerts';
+
+  @override
+  String get healthAlerts => 'Health Alerts';
+
+  @override
+  String get complianceAlerts => 'Compliance Alerts';
+
+  @override
+  String get blockchainVerification => 'Blockchain Verification';
+
+  @override
+  String get animalRecordsOnBlockchain => 'Animal Records on Blockchain';
+
+  @override
+  String get verifyAnimalData => 'Verify Animal Data';
+
+  @override
+  String get blockchainTransactions => 'Blockchain Transactions';
+
+  @override
+  String get aiVetAssistant => 'AI Vet Assistant';
+
+  @override
+  String get aiTreatmentRecommendations => 'AI Treatment Recommendations';
+
+  @override
+  String get getAiRecommendations => 'Get AI Recommendations';
+
+  @override
+  String get aiHealthAnalysis => 'AI Health Analysis';
+
+  @override
+  String get shareWithVet => 'Share with Vet';
+
+  @override
+  String get digitalCertificate => 'Digital Certificate';
+
+  @override
+  String get withdrawalPeriodActive => 'Withdrawal Period Active';
+
+  @override
+  String get withdrawalPeriodCompleted => 'Withdrawal Period Completed';
+
+  @override
+  String get endsOn => 'Ends';
+
+  @override
+  String get certificateReadyForSharing => 'QR Certificate ready for sharing';
+
+  @override
+  String get animalIdentification => 'Animal Identification';
+
+  @override
+  String get enterUniqueAnimalId => 'Enter unique animal ID';
+
+  @override
+  String get generateId => 'Generate ID';
+
+  @override
+  String get pleaseEnterAnimalId => 'Please enter an animal ID';
+
+  @override
+  String get pleaseSelectSpecies => 'Please select a species';
+
+  @override
+  String get breedAgeDetails => 'Breed & Age Details';
+
+  @override
+  String get pleaseEnterAge => 'Please enter age';
+
+  @override
+  String get enterValidAge => 'Enter valid age (0-50)';
+
+  @override
+  String get enterCustomBreed => 'Enter Custom Breed';
+
+  @override
+  String get enterBreedName => 'Enter breed name';
+
+  @override
+  String get pleaseSelectBreed => 'Please select a breed';
+
+  @override
+  String get pleaseEnterBreed => 'Please enter breed';
+
+  @override
+  String get otherCustom => 'Other (Custom)';
+
+  @override
+  String get selectSpeciesFirst => 'Select species first';
+
+  @override
+  String get saving => 'Saving...';
+
+  @override
+  String get animalAddedSuccessfully => 'Animal added successfully!';
+
+  @override
+  String get failedToSaveAnimal => 'Failed to save animal. Please try again.';
+
+  @override
+  String get allTypes => 'All Types';
+
+  @override
+  String get withdrawalWarning => 'Withdrawal Warning';
+
+  @override
+  String get withdrawalExpired => 'Withdrawal Expired';
+
+  @override
+  String get mrlViolation => 'MRL Violation';
+
+  @override
+  String get treatmentOverdue => 'Treatment Overdue';
+
+  @override
+  String get complianceRisk => 'Compliance Risk';
+
+  @override
+  String get allSeverities => 'All Severities';
+
+  @override
+  String get totalAlerts => 'Total Alerts';
+
+  @override
+  String get unread => 'Unread';
+
+  @override
+  String get critical => 'Critical';
+
+  @override
+  String get noAlertsFound => 'No alerts found';
+
+  @override
+  String get allComplianceChecksPassing => 'All compliance checks are passing';
+
+  @override
+  String get createCustomAlert => 'Create Custom Alert';
+
+  @override
+  String get alertTitle => 'Alert Title';
+
+  @override
+  String get alertMessage => 'Alert Message';
+
+  @override
+  String get severity => 'Severity';
+
+  @override
+  String get alertType => 'Alert Type';
+
+  @override
+  String get createAlert => 'Create Alert';
+
+  @override
+  String get read => 'Read';
+
+  @override
+  String get markAsRead => 'Mark as Read';
+
+  @override
+  String get dismiss => 'Dismiss';
+
+  @override
+  String get justNow => 'Just now';
+
+  @override
+  String minutesAgo(Object count) {
+    return '$count minutes ago';
+  }
+
+  @override
+  String hoursAgo(Object count) {
+    return '$count hours ago';
+  }
+
+  @override
+  String daysAgo(Object count) {
+    return '$count days ago';
+  }
+
+  @override
+  String get low => 'Low';
+
+  @override
+  String get medium => 'Medium';
+
+  @override
+  String get high => 'High';
+
+  @override
+  String animalIdLabel(Object id) {
+    return 'Animal ID: $id';
+  }
+
+  @override
+  String get cow => 'Cow';
+
+  @override
+  String get buffalo => 'Buffalo';
+
+  @override
+  String get goat => 'Goat';
+
+  @override
+  String get sheep => 'Sheep';
 
   @override
   String get pig => 'Pig';
@@ -150,422 +906,427 @@ class AppLocalizationsEn extends AppLocalizations {
   String get poultry => 'Poultry';
 
   @override
-  String get farmSize => 'Farm Size';
+  String get other => 'Other';
 
   @override
-  String get productionSystem => 'Production System';
+  String get jersey => 'Jersey';
 
   @override
-  String get backyard => 'Backyard';
+  String get holstein => 'Holstein';
 
   @override
-  String get commercial => 'Commercial';
+  String get sahiwal => 'Sahiwal';
 
   @override
-  String get photos => 'Photos';
+  String get gir => 'Gir';
 
   @override
-  String get saveDraft => 'Save Draft';
+  String get redSindhi => 'Red Sindhi';
 
   @override
-  String get save => 'Save';
+  String get tharparkar => 'Tharparkar';
 
   @override
-  String get cancel => 'Cancel';
+  String get murrah => 'Murrah';
 
   @override
-  String get yes => 'Yes';
+  String get niliRavi => 'Nili-Ravi';
 
   @override
-  String get no => 'No';
+  String get jaffarabadi => 'Jaffarabadi';
 
   @override
-  String get submit => 'Submit';
+  String get surti => 'Surti';
 
   @override
-  String get export => 'Export';
+  String get bhadawari => 'Bhadawari';
 
   @override
-  String get import => 'Import';
+  String get beetal => 'Beetal';
 
   @override
-  String get settings => 'Settings';
+  String get boer => 'Boer';
 
   @override
-  String get help => 'Help';
+  String get jamunapari => 'Jamunapari';
 
   @override
-  String get logout => 'Logout';
+  String get sirohi => 'Sirohi';
 
   @override
-  String get chooseYourLanguage => 'Choose Your Language';
+  String get barbari => 'Barbari';
 
   @override
-  String get selectLanguageDescription => 'Select the language you prefer to use in the app';
+  String get merino => 'Merino';
 
   @override
-  String get welcomeBack => 'Welcome back';
+  String get rambouillet => 'Rambouillet';
 
   @override
-  String get mobileNumber => 'Mobile Number';
+  String get cheviot => 'Cheviot';
 
   @override
-  String get enterMobileNumber => 'Enter your mobile number';
+  String get suffolk => 'Suffolk';
 
   @override
-  String get sendOtp => 'Send OTP';
+  String get hampshire => 'Hampshire';
 
   @override
-  String get enterOtp => 'Enter 6-digit OTP';
+  String get largeWhite => 'Large White';
 
   @override
-  String get otpPlaceholder => '000000';
+  String get yorkshire => 'Yorkshire';
 
   @override
-  String get pinLogin => 'PIN Login';
+  String get berkshire => 'Berkshire';
 
   @override
-  String get enterUsername => 'Enter your username';
+  String get desi => 'Desi';
 
   @override
-  String get enterPassword => 'Enter your password';
+  String get layer => 'Layer';
 
   @override
-  String get enterPin => 'Enter 4-6 digit PIN';
+  String get broiler => 'Broiler';
 
   @override
-  String get verifyOtp => 'Verify OTP';
+  String get amuAnalyticsDashboard => 'AMU Analytics Dashboard';
 
   @override
-  String get dontHaveAccount => 'Don\'t have an account?';
+  String get noDataAvailable => 'No data available';
 
   @override
-  String get dataSecurityMessage => 'Your data is stored locally and encrypted for maximum security.';
+  String analysisPeriod(Object end, Object start) {
+    return 'Analysis Period: $start to $end';
+  }
 
   @override
-  String get testCredentials => 'Test Credentials';
+  String get summaryStatistics => 'Summary Statistics';
 
   @override
-  String get testMobile => 'Test Mobile';
+  String get totalAnimals => 'Total Animals';
 
   @override
-  String get otpValue => 'OTP';
+  String get animalsTreated => 'Animals Treated';
 
   @override
-  String get registerWithMobile => 'Register with mobile number for OTP login';
+  String get treatmentRate => 'Treatment Rate';
 
   @override
-  String get invalidCredentials => 'Invalid credentials';
+  String get complianceIssues => 'Compliance Issues';
 
   @override
-  String get loginSuccessful => 'Login is successful';
+  String get trendAnalysis => 'Trend Analysis';
 
   @override
-  String get otpSent => 'OTP sent to your mobile number';
+  String get trendDirection => 'Trend Direction';
 
   @override
-  String get failedToSendOtp => 'Failed to send OTP';
+  String get volatility => 'Volatility';
 
   @override
-  String get pleaseEnterMobile => 'Please enter mobile number';
+  String get seasonalPatterns => 'Seasonal Patterns';
 
   @override
-  String get pleaseEnterOtp => 'Please enter 6-digit OTP';
+  String get noSeasonalPatternsDetected => 'No seasonal patterns detected';
 
   @override
-  String get mobileRequired => 'Mobile number is required';
+  String peakMonths(Object months) {
+    return 'Peak months: $months';
+  }
 
   @override
-  String get validMobileRequired => 'Please enter a valid mobile number';
+  String lowMonths(Object months) {
+    return 'Low months: $months';
+  }
 
   @override
-  String get otpRequired => 'OTP is required';
+  String get complianceAnalysis => 'Compliance Analysis';
 
   @override
-  String get validOtpRequired => 'Please enter 6-digit OTP';
+  String get complianceRate => 'Compliance Rate';
 
   @override
-  String get usernameRequired => 'Username is required';
+  String get compliantAnimals => 'Compliant Animals';
 
   @override
-  String get passwordRequired => 'Password is required';
+  String get riskFactors => 'Risk Factors';
 
   @override
-  String get pinRequired => 'PIN is required';
+  String get noSignificantRiskFactors =>
+      'No significant risk factors identified';
 
   @override
-  String get pinMinLength => 'PIN must be at least 4 digits';
+  String get noMedicineUsageData => 'No medicine usage data available';
 
   @override
-  String get roleFarmer => 'Farmer';
+  String get medicineUsageDistribution => 'Medicine Usage Distribution';
 
   @override
-  String get roleVeterinarian => 'Veterinarian';
+  String get noRecommendationsAvailable => 'No recommendations available';
 
   @override
-  String get roleExtensionWorker => 'Extension Worker';
+  String get recommendations => 'Recommendations';
 
   @override
-  String get roleAuthority => 'Authority';
+  String failedToLoadAnalytics(Object error) {
+    return 'Failed to load analytics: $error';
+  }
 
   @override
-  String get farmGuardian => 'Farm Guardian';
+  String get addAnimalsFirstAi =>
+      'Add some animals first to get AI recommendations';
 
   @override
-  String get healthExpert => 'Health Expert';
+  String failedToGetAiRecommendations(Object error) {
+    return 'Failed to get AI recommendations: $error';
+  }
 
   @override
-  String get fieldSupport => 'Field Support';
+  String get noSpecificRecommendations =>
+      'No specific recommendations at this time';
 
   @override
-  String get regulatoryOversight => 'Regulatory Oversight';
+  String get healthScore => 'Health Score';
 
   @override
-  String get protectFarm => 'Protect your farm with comprehensive biosecurity measures and track compliance effortlessly.';
+  String get aiRecommendations => 'AI Recommendations';
 
   @override
-  String get monitorHealth => 'Monitor animal health, diagnose issues, and ensure optimal biosecurity standards.';
+  String get preventiveCare => 'Preventive Care';
 
   @override
-  String get provideGuidance => 'Provide expert guidance, conduct training, and support farmers in their biosecurity journey.';
+  String failedToAnalyzeHealth(Object error) {
+    return 'Failed to analyze health: $error';
+  }
 
   @override
-  String get overseeCompliance => 'Oversee compliance, manage system settings, and ensure regional biosecurity standards.';
+  String get loggingOut => 'Logging out...';
 
   @override
-  String get chooseYourRole => 'Choose Your Role';
+  String get aiTreatmentRecommendationsDesc => 'AI treatment recommendations';
 
   @override
-  String get selectRoleDescription => 'Select the role that best describes your responsibilities';
+  String ageAddedToDatabase(Object age) {
+    return 'Age: $age • Added to database';
+  }
 
   @override
-  String get manageFarmBiosecurity => 'Manage farm biosecurity and records.';
+  String get searchAnimals => 'Search animals';
 
   @override
-  String get provideVeterinaryServices => 'Provide veterinary services and monitor health.';
+  String get withdrawalStatus => 'Withdrawal';
 
   @override
-  String get assistFarmersTraining => 'Assist farmers with training and support.';
+  String get safeStatus => 'Safe';
 
   @override
-  String get overseeComplianceSettings => 'Oversee compliance and manage system settings.';
+  String get inWithdrawalStatus => 'In Withdrawal';
 
   @override
-  String get riskAssessments => 'Risk Assessments';
+  String get viewButton => 'View';
 
   @override
-  String get complianceTracking => 'Compliance Tracking';
+  String get aiButton => 'AI';
 
   @override
-  String get incidentReporting => 'Incident Reporting';
+  String get deleteButton => 'Delete';
 
   @override
-  String get healthMonitoring => 'Health Monitoring';
+  String get deletedMessage => 'Deleted';
 
   @override
-  String get diseaseDiagnosis => 'Disease Diagnosis';
+  String prescriptionForSpecies(Object species) {
+    return 'Prescription for $species';
+  }
 
   @override
-  String get treatmentRecords => 'Treatment Records';
+  String get activeStatus => 'Active';
 
   @override
-  String get trainingPrograms => 'Training Programs';
+  String get completedStatus => 'Completed';
 
   @override
-  String get farmVisits => 'Farm Visits';
+  String get medicineLabel => 'Medicine';
 
   @override
-  String get technicalSupport => 'Technical Support';
+  String get dosageLabel => 'Dosage';
 
   @override
-  String get systemAdministration => 'System Administration';
+  String get withdrawalPeriodLabel => 'Withdrawal Period';
 
   @override
-  String get complianceOversight => 'Compliance Oversight';
+  String get endsLabel => 'Ends';
 
   @override
-  String get dataAnalytics => 'Data Analytics';
+  String prescribedByLabel(Object vet) {
+    return 'Prescribed by: $vet';
+  }
 
   @override
-  String get premiumDashboard => 'Premium Dashboard';
+  String get viewDetailsButton => 'View Details';
 
   @override
-  String get advancedFarmManagement => 'Advanced farm management system';
+  String get digitalPrescriptionTitle => 'Digital Prescription';
 
   @override
-  String get noFarmConfigured => 'No Farm Configured';
+  String get prescriptionStatusLabel => 'Prescription Status';
 
   @override
-  String get farmerId => 'Farmer ID';
+  String get activeWithdrawalPeriodStatus => 'Active - Withdrawal Period';
 
   @override
-  String get useIdForConsultations => 'Use this ID for veterinary consultations';
+  String get completedSafeToConsumeStatus => 'Completed - Safe to Consume';
 
   @override
-  String get farmProfile => 'Farm Profile';
+  String get animalInformationSection => 'Animal Information';
 
   @override
-  String get edit => 'Edit';
+  String get prescriptionDetailsSection => 'Prescription Details';
 
   @override
-  String get farmDetails => 'Farm Details';
+  String speciesAndBreedLabel(Object breed, Object species) {
+    return 'Species & Breed: $species - $breed';
+  }
 
   @override
-  String get livestockInfo => 'Livestock Info';
+  String get productTypeLabel => 'Product Type';
 
   @override
-  String get noAnimalsRegistered => 'No animals registered';
+  String prescribedDateLabel(Object date) {
+    return 'Prescribed Date: $date';
+  }
 
   @override
-  String get addAnimalsToTrack => 'Add animals to track inventory';
+  String withdrawalEndsLabel(Object date) {
+    return 'Withdrawal Ends: $date';
+  }
 
   @override
-  String get farmAnalytics => 'Farm Analytics';
+  String get mrlStatusSection => 'MRL Status';
 
   @override
-  String get biosecurityScore => 'Biosecurity Score';
+  String currentMrlLabel(Object mrl) {
+    return 'Current MRL: $mrl units';
+  }
 
   @override
-  String get notAssessed => 'Not Assessed';
+  String statusLabel(Object status) {
+    return 'Status: $status';
+  }
 
   @override
-  String get compliance => 'Compliance';
+  String get veterinaryInformationSection => 'Veterinary Information';
 
   @override
-  String get compliant => 'Compliant';
+  String consultingVetLabel(Object vet) {
+    return 'Consulting Vet: $vet';
+  }
 
   @override
-  String get alerts => 'Alerts';
+  String vetIdLabel(Object id) {
+    return 'Vet ID: $id';
+  }
 
   @override
-  String get active => 'Active';
+  String get noVetAssignedMessage => 'No vet assigned';
 
   @override
-  String get healthCheck => 'Health Check';
+  String get viewMrlGraphButton => 'View MRL Graph';
 
   @override
-  String get pending => 'Pending';
+  String get noAnimalsAvailableMessage => 'No Animals Available';
 
   @override
-  String get training => 'Training';
+  String get addAnimalsToGenerateQrMessage =>
+      'Add animals to generate QR certificates';
 
   @override
-  String get modules => 'Modules';
+  String get qrCertificateGeneratorTitle => 'QR Certificate Generator';
 
   @override
-  String get animals => 'Animals';
+  String get generateQrCodesDesc =>
+      'Generate QR codes for animal certificates with safety status';
 
   @override
-  String get recentActivity => 'Recent Activity';
+  String qrGenerationDateLabel(Object date) {
+    return 'QR Generation Date: $date';
+  }
 
   @override
-  String get consultationHistory => 'Consultation History';
+  String speciesBreedDisplay(Object breed, Object species) {
+    return '$species - $breed';
+  }
 
   @override
-  String get viewAll => 'View All';
+  String idDisplay(Object id) {
+    return 'ID: $id';
+  }
 
   @override
-  String get disease => 'Disease';
+  String get withdrawalPeriodActiveMessage => 'Withdrawal Period Active';
 
   @override
-  String get followUp => 'Follow-up';
+  String get withdrawalPeriodCompletedMessage => 'Withdrawal Period Completed';
 
   @override
-  String get moreOptions => 'More Options';
+  String endsDateDisplay(Object date) {
+    return 'Ends: $date';
+  }
 
   @override
-  String get helpSupport => 'Help & Support';
+  String get generateQrCertificateButton => 'Generate QR Certificate';
 
   @override
-  String get backupRestore => 'Backup & Restore';
+  String get generatingQrCertificateMessage => 'Generating QR Certificate...';
 
   @override
-  String get adminPanel => 'Admin Panel';
+  String get qrCertificateGeneratedTitle => 'QR Certificate Generated';
 
   @override
-  String get confirmLogout => 'Are you sure you want to logout?';
+  String get animalInWithdrawalWarning =>
+      '⚠️ ANIMAL IN WITHDRAWAL - NOT SAFE TO CONSUME';
 
   @override
-  String get profileComingSoon => 'Profile - Coming Soon!';
+  String get safeToConsumeMessage => '✅ SAFE TO CONSUME';
 
   @override
-  String get settingsComingSoon => 'Settings - Coming Soon!';
+  String get doNotConsumeWarning =>
+      'Do not consume products from this animal until withdrawal period ends.';
 
   @override
-  String get premiumExperience => '✨ Premium Dashboard Experience!';
+  String get certificateDetailsSection => 'Certificate Details';
 
   @override
-  String get digitalRecordKeeping => '📝 Digital Record Keeping - Farm activity logs and compliance tracking';
+  String get speciesLabel => 'Species';
 
   @override
-  String get emergencyResponse => '🚑 Emergency Response - Outbreak protocols and emergency contacts';
+  String farmerIdLabel(Object id) {
+    return 'Farmer ID: $id';
+  }
 
   @override
-  String get veterinarianDashboard => 'Veterinarian Dashboard';
+  String generatedDateLabel(Object date) {
+    return 'Generated Date: $date';
+  }
 
   @override
-  String get licensedVeterinaryProfessional => 'Licensed Veterinary Professional';
+  String validUntilLabel(Object date) {
+    return 'Valid Until: $date';
+  }
 
   @override
-  String get veterinaryManagementHub => 'Veterinary Management Hub';
+  String get qrCertificateReadyMessage => 'QR Certificate ready for sharing';
 
   @override
-  String get healthMonitoringDiagnostics => 'Health Monitoring & Diagnostics';
+  String get errorTitle => 'Error';
 
   @override
-  String get diseaseSurveillance => 'Disease Surveillance';
+  String failedToGenerateQrMessage(Object error) {
+    return 'Failed to generate QR certificate: $error';
+  }
 
   @override
-  String get monitorRegionalHealthTrends => 'Monitor regional health trends';
-
-  @override
-  String get outbreakResponse => 'Outbreak Response';
-
-  @override
-  String get emergencyProtocolsAlerts => 'Emergency protocols & alerts';
-
-  @override
-  String get animalConsultation => 'Animal Consultation';
-
-  @override
-  String get consultAnimals => 'Consult Animals';
-
-  @override
-  String get examineTreatLivestock => 'Examine and treat livestock by farmer ID';
-
-  @override
-  String get complianceTraining => 'Compliance & Training';
-
-  @override
-  String get regulatoryCompliance => 'Regulatory Compliance';
-
-  @override
-  String get monitorFarmCompliance => 'Monitor farm compliance';
-
-  @override
-  String get professionalTraining => 'Professional Training';
-
-  @override
-  String get continuingEducation => 'Continuing education';
-
-  @override
-  String get veterinaryOversightSummary => 'Veterinary Oversight Summary';
-
-  @override
-  String get totalFarms => 'Total Farms';
-
-  @override
-  String get highRiskFarms => 'High Risk Farms';
-
-  @override
-  String get activeAlerts => 'Active Alerts';
-
-  @override
-  String get recentVeterinaryActivities => 'Recent Veterinary Activities';
-
-  @override
-  String get veterinarianProfileComingSoon => 'Veterinarian Profile - Coming Soon!';
-
-  @override
-  String get veterinarianSettingsComingSoon => 'Veterinarian Settings - Coming Soon!';
+  String get doNotConsumeProductsWarning =>
+      'Do not consume products from this animal until withdrawal period ends.';
 }
